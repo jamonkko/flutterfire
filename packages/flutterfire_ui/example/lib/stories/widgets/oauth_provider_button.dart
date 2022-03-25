@@ -6,7 +6,6 @@ import 'package:flutterfire_ui_example/stories/stories_lib/story.dart';
 enum OAuthProviders {
   google,
   apple,
-  facebook,
   twitter,
 }
 
@@ -30,11 +29,6 @@ class OAuthProviderButtonStory extends StoryWidget {
         break;
       case OAuthProviders.apple:
         config = const AppleProviderConfiguration();
-        break;
-      case OAuthProviders.facebook:
-        config = const FacebookProviderConfiguration(
-          clientId: FACEBOOK_CLIENT_ID,
-        );
         break;
       case OAuthProviders.twitter:
         config = const TwitterProviderConfiguration(

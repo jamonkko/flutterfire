@@ -16,10 +16,6 @@ class ProfileScreenStory extends StoryWidget {
     final googleEnabled =
         context.knob<bool>(title: 'Google OAuth', value: true);
     final appleEnabled = context.knob<bool>(title: 'Apple OAuth', value: true);
-    final facebookEnabled = context.knob<bool>(
-      title: 'Facebook OAuth',
-      value: true,
-    );
     final twitterEnabled = context.knob<bool>(
       title: 'Twitter OAuth',
       value: true,
@@ -37,10 +33,6 @@ class ProfileScreenStory extends StoryWidget {
                   clientId: GOOGLE_CLIENT_ID,
                 ),
               if (appleEnabled) const AppleProviderConfiguration(),
-              if (facebookEnabled)
-                const FacebookProviderConfiguration(
-                  clientId: FACEBOOK_CLIENT_ID,
-                ),
               if (twitterEnabled)
                 const TwitterProviderConfiguration(
                   apiKey: TWITTER_API_KEY,
